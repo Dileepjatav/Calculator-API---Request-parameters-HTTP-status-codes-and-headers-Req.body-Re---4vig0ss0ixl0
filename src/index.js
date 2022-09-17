@@ -91,12 +91,9 @@ app.post('/multiply',(req,res)=>{
         status="error"
         message="Invalid data types"                  
     }else 
-    if((num1>100000||num2>100000)&& result>100000){
-        message="Overflow"
-        status="error"
-    }else
-    if(num1<100000||num2<100000){
-        if(result<100000){
+    
+    if(num1<1000000&&num2<1000000){
+        if(result<1000000){
             message="Underflow"
             status="error"          
         }  
@@ -105,7 +102,7 @@ app.post('/multiply',(req,res)=>{
         {
             "status":status,
             "message":message,
-            "sum":result
+            "result":result
         }
     )
     res.end();
