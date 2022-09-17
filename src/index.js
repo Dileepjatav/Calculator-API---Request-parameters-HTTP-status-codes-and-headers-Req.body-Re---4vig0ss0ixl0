@@ -98,7 +98,7 @@ app.post('/multiply',(req,res)=>{
     
     if(num1<1000000&&num2<1000000){
         if(result>1000000){
-            message="Underflow"
+            message="Overflow"
             status="error"          
         }  
     }      
