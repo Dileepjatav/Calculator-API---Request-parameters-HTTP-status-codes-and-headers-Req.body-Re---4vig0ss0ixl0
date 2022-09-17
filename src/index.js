@@ -138,7 +138,7 @@ app.post('/divide',(req,res)=>{
         {
             "status":status,
             "message":message,
-            "sum":result
+            "result":result
         }
     )
     res.end();
