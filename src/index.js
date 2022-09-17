@@ -69,6 +69,12 @@ app.post('/sub',(req,res)=>{
         status="error"
         message="Invalid data types"                  
     }
+
+    if(result>1000000){
+        message="Underflow"
+        status="error" 
+
+    }
     
 
     res.json(
