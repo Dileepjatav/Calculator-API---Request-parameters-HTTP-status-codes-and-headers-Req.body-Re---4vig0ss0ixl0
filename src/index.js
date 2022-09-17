@@ -120,6 +120,7 @@ app.post('/multiply',(req,res)=>{
 
 })
 
+
 app.post('/divide',(req,res)=>{
     const num1=req.body.num1
     const num2=req.body.num2   
@@ -131,10 +132,7 @@ app.post('/divide',(req,res)=>{
         status="error"
         message="Invalid data types"                  
     }else 
-    if((num1>100000||num2>100000)&& result>100000){
-        message="Overflow"
-        status="error"
-    }else
+    
     if(num1<100000||num2<100000){
         if(result<100000){
             message="Underflow"
@@ -154,6 +152,7 @@ app.post('/divide',(req,res)=>{
     res.end();
 
 })
+
 
 
 
