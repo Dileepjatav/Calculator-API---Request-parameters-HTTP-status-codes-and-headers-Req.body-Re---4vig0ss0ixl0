@@ -67,7 +67,6 @@ app.post('/sub',(req,res)=>{
         if(result>1000000){
             message="Overflow"
             status="error"
-
         }
         
     }else
@@ -78,6 +77,12 @@ app.post('/sub',(req,res)=>{
             status="error"          
         }  
     } 
+    if(num1<1000000&&num2<1000000){
+        if(result>1000000){
+            message="Overflow"
+            status="error"          
+        }  
+    }
     
     if(typeof num1==='string'||typeof num2==='string'){
         status="error"
