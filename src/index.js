@@ -59,7 +59,7 @@ app.post('/add',(req,res)=>{
 app.post('/sub',(req,res)=>{
     const num1=req.body.num1
     const num2=req.body.num2   
-    message="the sum of given two numbers";
+    message="the difference of given two numbers";
     result=num1-num2;
     status="success"
 
@@ -154,6 +154,7 @@ app.post('/divide',(req,res)=>{
     res.end();
 
 })
+
 
 
 
