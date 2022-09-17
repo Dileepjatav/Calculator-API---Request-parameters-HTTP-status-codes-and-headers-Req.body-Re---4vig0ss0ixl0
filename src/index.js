@@ -66,9 +66,22 @@ app.post('/sub',(req,res)=>{
     if(typeof num1==='string'||typeof num2==='string'){
         status="error"
         message="Invalid data types"                  
+    } 
+    if((num1>1000000||num2>1000000)&& result>1000000){
+        message="Overflow"
+        status="error"
+    }else
+    
+    if(num1<1000000&&num2<1000000){
+        if(result>1000000){
+            message="Overflow"
+            status="error"          
+        }  
     }
     
-        
+    
+    
+    
     res.json(
         {
             "status":status,
