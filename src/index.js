@@ -73,7 +73,7 @@ app.post('/sub',(req,res)=>{
         {
             "status":status,
             "message":message,
-            "sum":result
+            "difference":result
         }
     )
     res.end();
