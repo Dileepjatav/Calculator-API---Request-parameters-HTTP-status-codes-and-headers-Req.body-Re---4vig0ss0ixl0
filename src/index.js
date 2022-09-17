@@ -73,12 +73,12 @@ app.post('/sub',(req,res)=>{
     }else
     
     if(num1<1000000&&num2<1000000){
-        if(result>1000000){
-            message="Overflow"
+        if(result<1000000){
+            message="Underflow"
             status="error"          
         }  
     } 
-    
+
     res.json(
         {
             "status":status,
