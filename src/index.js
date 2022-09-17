@@ -39,7 +39,7 @@ app.post('/add',(req,res)=>{
         status="error"
     }else
     if(num1<100000||num2<100000){
-        if(result>100000){
+        if(result<100000){
             message="Underflow"
             status="error"          
         }  
@@ -72,7 +72,7 @@ app.post('/sub',(req,res)=>{
         status="error"
     }else
     if(num1<100000||num2<100000){
-        if(result>100000){
+        if(result<100000){
             message="Underflow"
             status="error"          
         }  
@@ -104,7 +104,7 @@ app.post('/multiply',(req,res)=>{
         status="error"
     }else
     if(num1<100000||num2<100000){
-        if(result>100000){
+        if(result<100000){
             message="Underflow"
             status="error"          
         }  
@@ -136,7 +136,7 @@ app.post('/divide',(req,res)=>{
         status="error"
     }else
     if(num1<100000||num2<100000){
-        if(result>100000){
+        if(result<100000){
             message="Underflow"
             status="error"          
         }  
@@ -154,6 +154,10 @@ app.post('/divide',(req,res)=>{
     res.end();
 
 })
+
+
+
+
 
 
 
