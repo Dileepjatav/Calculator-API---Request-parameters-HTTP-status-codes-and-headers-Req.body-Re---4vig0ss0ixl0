@@ -60,7 +60,7 @@ app.post('/sub',(req,res)=>{
     const num1=req.body.num1
     const num2=req.body.num2   
     message="the difference of given two numbers";
-    result=Math.abs(num1-num2);
+    result=(num1-num2);
     status="success"
 
     
