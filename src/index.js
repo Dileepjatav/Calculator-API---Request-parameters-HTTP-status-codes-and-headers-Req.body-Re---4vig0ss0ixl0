@@ -60,7 +60,7 @@ app.post('/sub',(req,res)=>{
     const num1=req.body.num1
     const num2=req.body.num2   
     message="the difference of given two numbers";
-    result=num1-num2;
+    result=Math.abs(num1-num2);
     status="success"
 
     
@@ -70,11 +70,21 @@ app.post('/sub',(req,res)=>{
         message="Invalid data types"                  
     }
 
-    if(result>1000000){
-        message="Underflow"
-        status="error" 
-
+    if((num1>1000000||num2>1000000)&& result>100000){
+        message="Overflow"
+        status="error"
     }
+    if((num1>1000000||num2>1000000)&& result<100000){
+        message="Underflow"
+        status="error"
+    }
+
+    // if(result>1000000){
+    //     message="Underflow"
+    //     status="error" 
+
+    // }
+   
     
 
     res.json(
